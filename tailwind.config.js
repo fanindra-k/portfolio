@@ -17,10 +17,10 @@ tailwind.config = {
         darkTheme: "#11001F",
       },
       boxShadow: {
-        black: "4px_4px 0 #000",
+        black: "4px 4px 0 #000",
         white: "4px 4px 0 #fff",
       },
     },
   },
-  darkMode: "selector",
+  darkMode: "class", // Make sure your dark mode toggle uses this class.
 };

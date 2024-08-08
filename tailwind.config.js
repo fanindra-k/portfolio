@@ -17,7 +17,7 @@ tailwind.config = {
         darkTheme: "#11001F",
       },
       boxShadow: {
-        black: "4px_4px 0 #000",
+        black: "4px 4px 0 #000000",
         white: "4px 4px 0 #fff",
       },
     },

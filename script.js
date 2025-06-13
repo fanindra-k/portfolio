@@ -1,11 +1,7 @@
 const sideMenu = document.querySelector("#sideMenu");
 const navBaar = document.querySelector("nav");
 const navLinks = document.querySelector("nav ul");
-// const api_key = 'value = "7910381d-6332-4425-b318-adbd8b25087b"';
-// document.getElementById("key_value").innerHTML = api_key;
 const web3forms = "7910381d-6332-4425-b318-adbd8b25087b";
-document.querySelector('input[name="access_key"]').value =
-  process.env.ACCESS_KEY;
 
 function openMenu() {
   sideMenu.style.transform = "translateX(-16rem)";
@@ -16,6 +12,7 @@ function closeMenu() {
 }
 
 window.addEventListener("scroll", () => {
+  console.log("Scroll event fired");
   if (scrollY > 50) {
     navBaar.classList.add(
       "bg-white",

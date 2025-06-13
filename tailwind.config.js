@@ -1,6 +1,20 @@
 tailwind.config = {
   theme: {
     extend: {
+      keyframes: {
+        "border-beam": {
+          "0%": {
+            "border-color": "#ff00ff",
+          },
+          "50%": {
+            "border-color": "#00ffff",
+          },
+          "100%": {
+            "border-color": "#ff00ff",
+          },
+        },
+      },
+
       gridTemplateColumns: {
         auto: "repeat(auto-fit, minmax(200px, 1fr))",
       },
@@ -10,6 +24,7 @@ tailwind.config = {
       },
       animation: {
         spin_slow: "spin 6s linear infinite",
+        "border-beam": "border-beam 6s linear infinite",
       },
       colors: {
         lightHover: "#fcf4ff",

@@ -69,3 +69,23 @@ function toggleTheme() {
     localStorage.theme = "light";
   }
 }
+function showFullDescription(btn) {
+  document.getElementById("fullDescriptionText").textContent =
+    btn.getAttribute("data-full");
+  const gitUrl = btn.getAttribute("data-git");
+  const gitLink = document.getElementById("fullDescriptionGit");
+  if (gitUrl) {
+    gitLink.href = gitUrl;
+    gitLink.style.display = "inline-flex";
+  } else {
+    gitLink.style.display = "none";
+  }
+  document.getElementById("fullDescriptionModal").classList.remove("hidden");
+}
+
+// Close modal on overlay or close button click
+function closeFullDescription(event) {
+  if (!event || event.target === event.currentTarget) {
+    document.getElementById("fullDescriptionModal").classList.add("hidden");
+  }
+}

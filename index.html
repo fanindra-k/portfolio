@@ -767,20 +767,63 @@
       <div class="grid grid-cols-auto my-10 gap-5 dark:text-black">
         <!-- card 1 -->
         <div
-          class="aspect-square bg-[url('./images/recipe.jpg')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
+          class="aspect-square bg-[url('./images/multithreading.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
         >
           <div
             class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7"
           >
             <div>
-              <h2 class="font-semibold">Recipe Sharing</h2>
-              <p class="text-sm text-gray-700">Web Development</p>
+              <h2 class="font-semibold mb-1">Multithreading</h2>
+              <p
+                class="text-sm text-gray-700 line-clamp-1"
+                id="project-preview"
+              >
+                Java-based job scheduler using concurrent threads.
+              </p>
             </div>
             <div
-              class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition"
+              class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition self-end cursor-pointer"
+              onclick="showFullDescription(this)"
+              data-full="The Multithreaded Job Scheduler is a Java-based system designed to efficiently schedule and execute jobs using concurrent threads. The scheduler allows jobs to be added, prioritized, and processed in parallel, maximizing resource utilization and reducing execution time."
+              data-git="https://github.com/fanindra-k/multithreaded-job-scheduler"
             >
-              <img src="./images/send-icon.png" alt="" class="w-5" />
+              <img src="./images/send-icon.png" alt="" class="w-10" />
             </div>
+          </div>
+        </div>
+        <!-- Modal for full description -->
+        <div
+          id="fullDescriptionModal"
+          class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden"
+          onclick="closeFullDescription(event)"
+        >
+          <div
+            class="bg-white rounded-lg p-8 max-w-lg w-full relative"
+            onclick="event.stopPropagation()"
+          >
+            <button
+              onclick="closeFullDescription(event)"
+              class="absolute top-2 right-2 text-gray-500 hover:text-black text-2xl"
+              aria-label="Close"
+              type="button"
+            >
+              &times;
+            </button>
+            <h2 class="font-semibold mb-4">
+              Java-based job scheduler using concurrent threads.
+            </h2>
+            <p id="fullDescriptionText" class="text-gray-700 mb-4"></p>
+            <a
+              id="fullDescriptionGit"
+              href="#"
+              class="inline-flex items-center gap-2 text-blue-600 underline text-sm mt-2"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="display: none"
+            >
+              View on GitHub
+              <img src="./images/send-icon.png" alt="" class="w-4" />
+            </a>
           </div>
         </div>
         <!-- card 2 -->
@@ -834,24 +877,6 @@
           </div>
         </div>
         <!-- card 4 -->
-
-        <div
-          class="aspect-square bg-[url('./images/work-4.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
-        >
-          <div
-            class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7"
-          >
-            <div>
-              <h2 class="font-semibold">Backend Project</h2>
-              <p class="text-sm text-gray-700">Web Development</p>
-            </div>
-            <div
-              class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition"
-            >
-              <img src="./images/send-icon.png" alt="" class="w-5" />
-            </div>
-          </div>
-        </div>
       </div>
 
       <a
